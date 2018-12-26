@@ -245,3 +245,11 @@ html, body {
   align-items: center;
   flex-direction: column;
 }
+
+.content .right .content dl dt {
+  width: 100%;
+}
+
+.content .right .content dl dt img {
+  width: 100%;
+}
