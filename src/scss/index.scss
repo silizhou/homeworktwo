@@ -1,11 +1,4 @@
-@import "./mixin.scss";
-
-$font-size: 37.5px !default;
-
-@function rem($px) {
-    @return $px / $font-size * 1rem;
-}
-
+@import "mixin.scss";
 * {
     box-sizing: border-box;
 }
@@ -89,11 +82,9 @@ $font-size: 37.5px !default;
     flex: 1;
     background: #ffc;
     display: flex;
-
     .left {
         flex: 2;
     }
-
     .right {
         flex: 8;
         height: 100%;
@@ -109,19 +100,18 @@ $font-size: 37.5px !default;
             background: #fff;
             dl {
                 width: 33%;
-                padding: rem(5px);
+                padding: pxTorem(5px);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                dt{
+                dt {
                     width: 100%;
-                    img{
+                    img {
                         width: 100%;
                     }
                 }
             }
-          
         }
     }
 }
