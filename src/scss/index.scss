@@ -16,4 +16,34 @@
     width: 100%;
     flex: 1;
     background: #ffc;
+    display: flex;
+    .left {
+        flex: 2;
+        height: 100%;
+        overflow: hidden;
+        background: #ccc;
+        .ulList {
+            width: 100%;
+            height: 140%;
+            li {
+                width: 100%;
+                height: 50px;
+                font-size: 14px;
+                p {
+                    width: 100%;
+                    height: 100%;
+                    line-height: 50px;
+                    text-align: center;
+                }
+            }
+            li.current {
+                background: #f8f8f8;
+                border-left: 5px solid #f0f;
+                color: #f0f;
+            }
+        }
+    }
+    .right {
+        flex: 8;
+    }
 }

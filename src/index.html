@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./scss/index.min.css">
+    <script>
+    </script>
 </head>
 
 <body>
@@ -15,10 +17,36 @@
 
         </div>
         <div class="content">
-            <div class="left"></div>
+            <div class="left">
+                <ul class="ulList">
+                    <!-- <li class="current">
+                        <p>正在</p>
+                    </li> -->
+                </ul>
+            </div>
             <div class="right"></div>
         </div>
     </div>
+    <script src="./js/libs/better-scroll.js"></script>
+    <script src="./js/libs/jquery-2.1.1.min.js"></script>
+    <script>
+        $.ajax({
+            url: './data/list.json',
+            success: function(data) {
+                data.forEach(file => {
+                    var str = `<li>
+                                    <p>${file.name}</p>
+                                </li>`;
+                    $(str).appendTo($(".ulList"));
+                });
+                $("li").eq(0).addClass("current")
+            }
+        })
+
+        var listbs = new BScroll('.left', {
+            scrollY: true,
+        })
+    </script>
 </body>
 
 </html>
