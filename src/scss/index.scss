@@ -80,10 +80,21 @@
 .content {
     width: 100%;
     flex: 1;
-    background: #ffc;
     display: flex;
     .left {
         flex: 2;
+        border: 1px solid #ccc;
+        li {
+            width: 100%;
+            height: pxTorem(40px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: pxTorem(14px);
+        }
+        .active {
+            background: rgb(163, 163, 158)
+        }
     }
     .right {
         flex: 8;
@@ -92,14 +103,14 @@
         overflow: hidden;
         .content {
             width: 100%;
-            height: 150%;
+            flex: 1;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             background: #fff;
             dl {
-                width: 33%;
+                width: 26%;
                 padding: pxTorem(5px);
                 display: flex;
                 justify-content: center;

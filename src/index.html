@@ -27,7 +27,18 @@
             </div>
         </div>
         <div class="content">
-            <div class="left"></div>
+            <div class="left">
+                <li class="active">商品1</li>
+                <li>商品2</li>
+                <li>商品3</li>
+                <li>商品4</li>
+                <li>商品5</li>
+                <li>商品6</li>
+                <li>商品7</li>
+                <li>商品8</li>
+                <li>商品9</li>
+                <li>商品10</li>
+            </div>
             <div class="right">
                 <div class="content">
                     <dl>
@@ -135,6 +146,9 @@
     <script>
         var right = new BScroll('.right', {
             scrollY: true,
+        });
+        $('.left').on("click", 'li', function() {
+            $(this).addClass("active").siblings().removeClass("active")
         })
     </script>
 </body>
